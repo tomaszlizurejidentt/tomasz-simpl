@@ -72,8 +72,8 @@ var hdConstraints = {
 
 var customConstraints = {
   video: {
-    width: 640,
-    height: 480
+    width: 480,
+    height: 640
     
   }
 };
