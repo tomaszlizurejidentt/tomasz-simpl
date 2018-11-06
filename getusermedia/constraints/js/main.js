@@ -19,8 +19,10 @@ limitations under the License.
 var vgaButton = document.querySelector('button#vga');
 var qvgaButton = document.querySelector('button#qvga');
 var hdButton = document.querySelector('button#hd');
+var customButton = document.querySelector('button#custom');
 var dimensions = document.querySelector('p#dimensions');
 var video = document.querySelector('video');
+
 
 function successCallback(stream) {
   window.stream = stream; // stream available to console
@@ -69,6 +71,13 @@ var hdConstraints = {
   }
 };
 
+var customConstraints = {
+  video: {
+    height: 720,
+    width: 480
+  }
+};
+
 qvgaButton.onclick = function() {
   getMedia(qvgaConstraints);
 };
@@ -77,6 +86,9 @@ vgaButton.onclick = function() {
 };
 hdButton.onclick = function() {
   getMedia(hdConstraints);
+};
+customButton.onclick = function() {
+  getMedia(customConstraints);
 };
 
 function getMedia(constraints) {
