@@ -14,7 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-'use strict';
 
 var vgaButton = document.querySelector('button#vga');
 var qvgaButton = document.querySelector('button#qvga');
